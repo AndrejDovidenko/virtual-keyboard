@@ -37,9 +37,17 @@
   flex-grow: 1;
 }
 
-.active {
-  background-color: #007bff;
+.button-basic:hover {
+  background-color: #2462a3;
 }
+
+.button-basic:active {
+  background-color: #007bff;
+  border-radius: 20px;
+}
+/* .active {
+  background-color: #007bff;
+} */
 
 .english {
   color: white;
@@ -61,7 +69,7 @@
 }
 
 .right-shift {
-  width: 25px;
+  width: 24px;
 }
 
 .arrow-top {
@@ -109,5 +117,5 @@
 }
 
 .space {
-  flex-grow: 6.4;
+  flex-grow: 8;
 }

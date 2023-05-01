@@ -144,3 +144,9 @@
 .space {
   flex-grow: 8;
 }
+
+.info {
+  font-size: 28px;
+  text-align: center;
+  margin: 40px;
+}

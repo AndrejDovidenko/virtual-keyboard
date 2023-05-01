@@ -494,12 +494,18 @@ function createPage() {
   const container = document.createElement("main");
   const textarea = document.createElement("textarea");
   const keyboard = document.createElement("section");
+  const info = document.createElement("div");
+  const contentInfo = `<p>Windows OS</p>
+    <p>To switch between keyboard layouts press Shift + Alt</p>`;
+  info.innerHTML = contentInfo;
 
   container.className = "container";
   textarea.className = "textarea";
   keyboard.className = "keyboard";
+  info.className = "info";
   textarea.rows = "10";
   textarea.cols = "80";
+
   body.appendChild(container);
   container.appendChild(textarea);
   container.appendChild(keyboard);
@@ -508,6 +514,8 @@ function createPage() {
   keyboard.appendChild(createButton(arrThird));
   keyboard.appendChild(createButton(arrFourth));
   keyboard.appendChild(createButton(arrFifth));
+  container.appendChild(info);
+
   return body;
 }
 createPage();
@@ -518,12 +526,8 @@ function createButton(arr) {
   for (let i = 0; i < arr.length; i++) {
     const button = document.createElement("div");
     button.className = arr[i].class;
-    const content =
-      // `<div class="english">
-      `<p class="english">${arr[i].enContentFirst}</p>
+    const content = `<p class="english">${arr[i].enContentFirst}</p>
       <p class="english">${arr[i].enContentSecond}</p>
-    
-    
       <p class="russian">${arr[i].ruContentFirst}</p>
       <p class="russian">${arr[i].ruContentSecond}</p>`;
     button.innerHTML = content;

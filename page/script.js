@@ -324,7 +324,7 @@ const arrThird = [
 
 const arrFourth = [
   {
-    class: "button-basic medium",
+    class: "button-basic medium shift-left",
     enContentFirst: "Shift",
     enContentSecond: "",
     ruContentFirst: "Shift",
@@ -409,9 +409,9 @@ const arrFourth = [
   },
   {
     class: "button-basic",
-    enContentFirst: "<div class = arrow-top></div>",
+    enContentFirst: "<span class = 'arrow-top english'></span>",
     enContentSecond: "",
-    ruContentFirst: "<div class = arrow-top></div>",
+    ruContentFirst: "<span class = 'arrow-top russian'></span>",
     ruContentSecond: "",
   },
   {
@@ -439,7 +439,7 @@ const arrFifth = [
     ruContentSecond: "",
   },
   {
-    class: "button-basic",
+    class: "button-basic alt-left",
     enContentFirst: "Alt",
     enContentSecond: "",
     ruContentFirst: "Alt",
@@ -468,23 +468,23 @@ const arrFifth = [
   },
   {
     class: "button-basic",
-    enContentFirst: "<div class = arrow-left></div>",
+    enContentFirst: "<span class = 'arrow-left english'></span>",
     enContentSecond: "",
-    ruContentFirst: "<div class = arrow-left></div>",
+    ruContentFirst: "<span class = 'arrow-left russian'></span>",
     ruContentSecond: "",
   },
   {
     class: "button-basic",
-    enContentFirst: "<div class = arrow-down></div>",
+    enContentFirst: "<span class = 'arrow-down english'></span>",
     enContentSecond: "",
-    ruContentFirst: "<div class = arrow-down></div>",
+    ruContentFirst: "<span class = 'arrow-down russian'></span>",
     ruContentSecond: "",
   },
   {
     class: "button-basic",
-    enContentFirst: "<div class = arrow-right></div>",
+    enContentFirst: "<span class = 'arrow-right english'></span>",
     enContentSecond: "",
-    ruContentFirst: "<div class = arrow-right></div>",
+    ruContentFirst: "<span class = 'arrow-right russian'></span>",
     ruContentSecond: "",
   },
 ];
@@ -518,14 +518,14 @@ function createButton(arr) {
   for (let i = 0; i < arr.length; i++) {
     const button = document.createElement("div");
     button.className = arr[i].class;
-    const content = `<div class="english">
-      <p>${arr[i].enContentFirst}</p>
-      <p>${arr[i].enContentSecond}</p>
-    </div>
-    <div class="russian">
-      <p>${arr[i].ruContentFirst}</p>
-      <p>${arr[i].ruContentSecond}</p>
-    </div>`;
+    const content =
+      // `<div class="english">
+      `<p class="english">${arr[i].enContentFirst}</p>
+      <p class="english">${arr[i].enContentSecond}</p>
+    
+    
+      <p class="russian">${arr[i].ruContentFirst}</p>
+      <p class="russian">${arr[i].ruContentSecond}</p>`;
     button.innerHTML = content;
     row.appendChild(button);
   }
@@ -533,19 +533,66 @@ function createButton(arr) {
   return row;
 }
 
-const keyboard = document.querySelector(".keyboard");
-const textarea = document.querySelector(".textarea");
-let result = "";
-// textarea.innerText = result.innerText;
-keyboard.addEventListener("click", (e) => {
-  const button = e.target.closest(".english");
-  // const x = button.childNodes;
-  // let result = "";
-  result = `${result}${button.childNodes[3].innerText}`;
-  textarea.innerText = `${textarea.innerText}${result}`;
-  console.log(button.firstChild);
-  // console.log(x);
-});
+function outputSymbol(index) {
+  const keyboard = document.querySelector(".keyboard");
+  const textarea = document.querySelector(".textarea");
+  let result = "";
+  // textarea.innerText = result.innerText;
+  keyboard.addEventListener("click", (e) => {
+    const button = e.target.closest(".button-basic");
+    // const x = button.childNodes;
+    // let result = "";
+    result = `${result}${button.childNodes[index].innerText}`;
+    textarea.innerText = `${textarea.innerText}${result}`;
+    // console.log(button.childNodes[6]);
+    // console.log(x);
+  });
+}
+outputSymbol(2);
+
+function switchLanguage() {
+  const shiftLeft = document.querySelector(".shift-left");
+  const altLeft = document.querySelector(".alt-left");
+  const english = document.querySelectorAll(".english");
+  const russian = document.querySelectorAll(".russian");
+  shiftLeft.classList.add("pressed");
+  altLeft.classList.add("pressed");
+
+  english.forEach((el) => el.classList.toggle("english-inactive"));
+  russian.forEach((el) => el.classList.toggle("russian-active"));
+  const englishInactive = document.querySelector(".english-inactive");
+  if (!englishInactive) {
+    outputSymbol(2);
+  } else {
+    outputSymbol(6);
+  }
+}
+
+function runOnKeys(func, ...args) {
+  let arrChars = [];
+
+  document.addEventListener("keydown", function (event) {
+    if (event.repeat) return;
+    arrChars.push(event.code);
+  });
+
+  document.addEventListener("keyup", function () {
+    if (arrChars.length == 0) return;
+
+    let runFunc = true;
+    for (let arg of args) {
+      if (!arrChars.includes(arg)) {
+        runFunc = false;
+        break;
+      }
+    }
+    if (runFunc) switchLanguage();
+
+    arrChars.length = 0;
+  });
+}
+
+runOnKeys(switchLanguage(), "ShiftLeft", "AltLeft");
 
 // function activeButton(arr) {
 //   for (let i; i < arr.length; i++) {

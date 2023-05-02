@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.keyboard {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  gap: 5px;
+}
+
+.button-basic {
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+.button-basic:hover {
+  background-color: #2462a3;
+}
+
+.button-basic:active {
+  background-color: #007bff;
+  border-radius: 20px;
+}
+/* .active {
+  background-color: #007bff;
+} */
+
+/* @keyframes button-active {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: #007bff;
+  }
+} */
+
+.pressed {
+  /* animation: button-active 0.5s; */
+  background-color: #007bff;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.focus {
+  background-color: #007bff;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.english {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 14px;
+}
+
+.english-inactive {
+  display: none;
+}
+
+.russian {
+  display: none;
+}
+
+.russian-active {
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 14px;
+}
+
+.right-shift {
+  width: 15px;
+}
+
+.arrow-top {
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent #007bff transparent;
+  margin: 6px auto;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-width: 5px 10px 5px 0;
+  border-color: transparent #007bff transparent transparent;
+  margin: 6px auto;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-width: 10px 5px 0 5px;
+  border-color: #007bff transparent transparent transparent;
+  margin: 6px auto;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-width: 5px 0 5px 10px;
+  border-color: transparent transparent transparent #007bff;
+  margin: 6px auto;
+}
+
+.arrow-del {
+  display: none;
+}
+
+.big {
+  flex-grow: 3;
+}
+
+.medium {
+  flex-grow: 2;
+}
+
+.space {
+  flex-grow: 8;
+}
+
+.info {
+  font-size: 28px;
+  text-align: center;
+  margin: 40px;
+}

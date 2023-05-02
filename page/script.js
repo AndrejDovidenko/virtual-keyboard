@@ -1,6 +1,6 @@
 const arrFirst = [
   {
-    keycode: "Tab",
+    keycode: "Backquote",
     class: "button-basic",
     enContentFirst: "~",
     enContentSecond: "`",
@@ -8,7 +8,7 @@ const arrFirst = [
     ruContentSecond: "ё",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit1",
     class: "button-basic",
     enContentFirst: "!",
     enContentSecond: "1",
@@ -16,7 +16,7 @@ const arrFirst = [
     ruContentSecond: "1",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit2",
     class: "button-basic",
     enContentFirst: "@",
     enContentSecond: "2",
@@ -24,7 +24,7 @@ const arrFirst = [
     ruContentSecond: "2",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit3",
     class: "button-basic",
     enContentFirst: "#",
     enContentSecond: "3",
@@ -32,7 +32,7 @@ const arrFirst = [
     ruContentSecond: "3",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit4",
     class: "button-basic",
     enContentFirst: "$",
     enContentSecond: "4",
@@ -40,7 +40,7 @@ const arrFirst = [
     ruContentSecond: "4",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit5",
     class: "button-basic",
     enContentFirst: "%",
     enContentSecond: "5",
@@ -48,7 +48,7 @@ const arrFirst = [
     ruContentSecond: "5",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit6",
     class: "button-basic",
     enContentFirst: ":",
     enContentSecond: "6",
@@ -56,7 +56,7 @@ const arrFirst = [
     ruContentSecond: "6",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit7",
     class: "button-basic",
     enContentFirst: "&",
     enContentSecond: "7",
@@ -64,7 +64,7 @@ const arrFirst = [
     ruContentSecond: "7",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit8",
     class: "button-basic",
     enContentFirst: "*",
     enContentSecond: "8",
@@ -72,7 +72,7 @@ const arrFirst = [
     ruContentSecond: "8",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit9",
     class: "button-basic",
     enContentFirst: "(",
     enContentSecond: "9",
@@ -80,7 +80,7 @@ const arrFirst = [
     ruContentSecond: "9",
   },
   {
-    keycode: "Tab",
+    keycode: "Digit0",
     class: "button-basic",
     enContentFirst: ")",
     enContentSecond: "0",
@@ -88,7 +88,7 @@ const arrFirst = [
     ruContentSecond: "0",
   },
   {
-    keycode: "Tab",
+    keycode: "Minus",
     class: "button-basic",
     enContentFirst: "_",
     enContentSecond: "-",
@@ -96,7 +96,7 @@ const arrFirst = [
     ruContentSecond: "-",
   },
   {
-    keycode: "Tab",
+    keycode: "Equal",
     class: "button-basic",
     enContentFirst: "+",
     enContentSecond: "=",
@@ -104,7 +104,7 @@ const arrFirst = [
     ruContentSecond: "=",
   },
   {
-    keycode: "Tab",
+    keycode: "Backspace",
     class: "button-basic big backspace",
     enContentFirst: "Backspace",
     enContentSecond: "",
@@ -125,7 +125,7 @@ const arrSecond = [
   },
   {
     // atrName: "key-q",
-    class: "button-basic key-q",
+    class: "button-basic",
     keycode: "KeyQ",
     enContentFirst: "Q",
     enContentSecond: "q",
@@ -133,7 +133,7 @@ const arrSecond = [
     ruContentSecond: "й",
   },
   {
-    class: "button-basic key-w",
+    class: "button-basic",
     keycode: "KeyW",
     enContentFirst: "W",
     enContentSecond: "w",
@@ -158,6 +158,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "KeyT",
     enContentFirst: "T",
     enContentSecond: "t",
     ruContentFirst: "Е",
@@ -165,6 +166,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "KeyY",
     enContentFirst: "Y",
     enContentSecond: "y",
     ruContentFirst: "Н",
@@ -172,6 +174,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "KeyU",
     enContentFirst: "U",
     enContentSecond: "u",
     ruContentFirst: "Г",
@@ -179,6 +182,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "KeyI",
     enContentFirst: "I",
     enContentSecond: "i",
     ruContentFirst: "Ш",
@@ -186,6 +190,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "KeyO",
     enContentFirst: "O",
     enContentSecond: "o",
     ruContentFirst: "Щ",
@@ -193,6 +198,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "KeyP",
     enContentFirst: "P",
     enContentSecond: "p",
     ruContentFirst: "З",
@@ -200,6 +206,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "BracketLeft",
     enContentFirst: "{",
     enContentSecond: "[",
     ruContentFirst: "Х",
@@ -207,6 +214,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "BracketRight",
     enContentFirst: "}",
     enContentSecond: "]",
     ruContentFirst: "Ъ",
@@ -214,6 +222,7 @@ const arrSecond = [
   },
   {
     class: "button-basic",
+    keycode: "Backslash",
     enContentFirst: "|",
     enContentSecond: "&#92",
     ruContentFirst: "/",
@@ -221,6 +230,7 @@ const arrSecond = [
   },
   {
     class: "button-basic medium",
+    keycode: "Delete",
     enContentFirst: "Del",
     enContentSecond: "",
     ruContentFirst: "Del",
@@ -231,6 +241,7 @@ const arrSecond = [
 const arrThird = [
   {
     class: "button-basic medium",
+    keycode: "CapsLock",
     enContentFirst: "Caps Lock",
     enContentSecond: "",
     ruContentFirst: "Caps Lock",
@@ -238,6 +249,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyA",
     enContentFirst: "A",
     enContentSecond: "a",
     ruContentFirst: "Ф",
@@ -245,6 +257,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyS",
     enContentFirst: "S",
     enContentSecond: "s",
     ruContentFirst: "Ы",
@@ -252,6 +265,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyD",
     enContentFirst: "D",
     enContentSecond: "d",
     ruContentFirst: "В",
@@ -259,6 +273,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyF",
     enContentFirst: "F",
     enContentSecond: "f",
     ruContentFirst: "А",
@@ -266,6 +281,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyG",
     enContentFirst: "G",
     enContentSecond: "g",
     ruContentFirst: "П",
@@ -273,6 +289,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyH",
     enContentFirst: "H",
     enContentSecond: "h",
     ruContentFirst: "Р",
@@ -280,6 +297,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyJ",
     enContentFirst: "J",
     enContentSecond: "j",
     ruContentFirst: "О",
@@ -287,6 +305,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyK",
     enContentFirst: "K",
     enContentSecond: "k",
     ruContentFirst: "Л",
@@ -294,6 +313,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "KeyL",
     enContentFirst: "L",
     enContentSecond: "l",
     ruContentFirst: "Д",
@@ -301,6 +321,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "Semicolon",
     enContentFirst: ":",
     enContentSecond: ";",
     ruContentFirst: "Ж",
@@ -308,6 +329,7 @@ const arrThird = [
   },
   {
     class: "button-basic",
+    keycode: "Quote",
     enContentFirst: '"',
     enContentSecond: "'",
     ruContentFirst: "Э",
@@ -315,6 +337,7 @@ const arrThird = [
   },
   {
     class: "button-basic big",
+    keycode: "Enter",
     enContentFirst: "Enter",
     enContentSecond: "",
     ruContentFirst: "Enter",
@@ -325,6 +348,7 @@ const arrThird = [
 const arrFourth = [
   {
     class: "button-basic medium shift-left",
+    keycode: "ShiftLeft",
     enContentFirst: "Shift",
     enContentSecond: "",
     ruContentFirst: "Shift",
@@ -332,6 +356,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "IntlBackslash",
     enContentFirst: "|",
     enContentSecond: "&#92",
     ruContentFirst: "/",
@@ -339,6 +364,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "KeyZ",
     enContentFirst: "Z",
     enContentSecond: "z",
     ruContentFirst: "Я",
@@ -346,6 +372,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "KeyX",
     enContentFirst: "X",
     enContentSecond: "x",
     ruContentFirst: "Ч",
@@ -353,6 +380,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "KeyC",
     enContentFirst: "C",
     enContentSecond: "c",
     ruContentFirst: "С",
@@ -360,6 +388,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "KeyV",
     enContentFirst: "V",
     enContentSecond: "v",
     ruContentFirst: "М",
@@ -367,6 +396,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "KeyB",
     enContentFirst: "B",
     enContentSecond: "b",
     ruContentFirst: "И",
@@ -374,6 +404,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "KeyN",
     enContentFirst: "N",
     enContentSecond: "n",
     ruContentFirst: "Т",
@@ -381,6 +412,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "KeyM",
     enContentFirst: "M",
     enContentSecond: "m",
     ruContentFirst: "Ь",
@@ -388,6 +420,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "Comma",
     enContentFirst: "<",
     enContentSecond: ",",
     ruContentFirst: "Б",
@@ -395,6 +428,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "Period",
     enContentFirst: ">",
     enContentSecond: ".",
     ruContentFirst: "Ю",
@@ -402,6 +436,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "Slash",
     enContentFirst: "?",
     enContentSecond: "/",
     ruContentFirst: ",",
@@ -409,6 +444,7 @@ const arrFourth = [
   },
   {
     class: "button-basic",
+    keycode: "ArrowUp",
     enContentFirst: "<span class = 'arrow-top english'></span>",
     enContentSecond: "",
     ruContentFirst: "<span class = 'arrow-top russian'></span>",
@@ -416,6 +452,7 @@ const arrFourth = [
   },
   {
     class: "button-basic right-shift",
+    keycode: "ShiftRight",
     enContentFirst: "Shift",
     enContentSecond: "",
     ruContentFirst: "Shift",
@@ -426,6 +463,7 @@ const arrFourth = [
 const arrFifth = [
   {
     class: "button-basic medium",
+    keycode: "ControlLeft",
     enContentFirst: "Ctrl",
     enContentSecond: "",
     ruContentFirst: "Ctrl",
@@ -433,6 +471,7 @@ const arrFifth = [
   },
   {
     class: "button-basic",
+    keycode: "MetaLeft",
     enContentFirst: "Win",
     enContentSecond: "",
     ruContentFirst: "Win",
@@ -440,6 +479,7 @@ const arrFifth = [
   },
   {
     class: "button-basic alt-left",
+    keycode: "AltLeft",
     enContentFirst: "Alt",
     enContentSecond: "",
     ruContentFirst: "Alt",
@@ -447,6 +487,7 @@ const arrFifth = [
   },
   {
     class: "button-basic space",
+    keycode: "Space",
     enContentFirst: "&nbsp",
     enContentSecond: "&nbsp",
     ruContentFirst: "&nbsp",
@@ -454,6 +495,7 @@ const arrFifth = [
   },
   {
     class: "button-basic",
+    keycode: "AltRight",
     enContentFirst: "Alt",
     enContentSecond: "",
     ruContentFirst: "Alt",
@@ -461,6 +503,7 @@ const arrFifth = [
   },
   {
     class: "button-basic medium",
+    keycode: "ControlRight",
     enContentFirst: "Ctrl",
     enContentSecond: "",
     ruContentFirst: "Ctrl",
@@ -468,6 +511,7 @@ const arrFifth = [
   },
   {
     class: "button-basic",
+    keycode: "ArrowLeft",
     enContentFirst: "<span class = 'arrow-left english'></span>",
     enContentSecond: "",
     ruContentFirst: "<span class = 'arrow-left russian'></span>",
@@ -475,6 +519,7 @@ const arrFifth = [
   },
   {
     class: "button-basic",
+    keycode: "ArrowDown",
     enContentFirst: "<span class = 'arrow-down english'></span>",
     enContentSecond: "",
     ruContentFirst: "<span class = 'arrow-down russian'></span>",
@@ -482,6 +527,7 @@ const arrFifth = [
   },
   {
     class: "button-basic",
+    keycode: "ArrowRight",
     enContentFirst: "<span class = 'arrow-right english'></span>",
     enContentSecond: "",
     ruContentFirst: "<span class = 'arrow-right russian'></span>",
@@ -524,8 +570,9 @@ function createButton(arr) {
   const row = document.createElement("div");
   row.className = "row";
   for (let i = 0; i < arr.length; i++) {
-    const button = document.createElement("div");
+    const button = document.createElement("button");
     button.className = arr[i].class;
+    button.name = arr[i].keycode;
     const content = `<p class="english">${arr[i].enContentFirst}</p>
       <p class="english">${arr[i].enContentSecond}</p>
       <p class="russian">${arr[i].ruContentFirst}</p>
@@ -537,31 +584,50 @@ function createButton(arr) {
   return row;
 }
 
-function outputSymbol(index) {
-  const keyboard = document.querySelector(".keyboard");
-  const textarea = document.querySelector(".textarea");
-  let result = "";
-  // textarea.innerText = result.innerText;
-  keyboard.addEventListener("click", (e) => {
-    const button = e.target.closest(".button-basic");
-    // const x = button.childNodes;
-    // let result = "";
-    result = `${result}${button.childNodes[index].innerText}`;
-    textarea.innerText = `${textarea.innerText}${result}`;
-    // console.log(button.childNodes[6]);
-    // console.log(x);
+function keyboardButtonActive(arr) {
+  document.addEventListener("keydown", () => {
+    for (let i = 0; i < arr.length; i++) {
+      if (event.code === arr[i].keycode) {
+        console.log(222);
+        const pressedButton = document.getElementsByName(arr[i].keycode);
+        pressedButton.item(0).classList.add("pressed");
+      }
+    }
+  });
+  document.addEventListener("keyup", () => {
+    for (let i = 0; i < arr.length; i++) {
+      if (event.code === arr[i].keycode) {
+        console.log(222);
+        const pressedButton = document.getElementsByName(arr[i].keycode);
+        pressedButton.item(0).classList.remove("pressed");
+      }
+    }
   });
 }
-outputSymbol(2);
+
+keyboardButtonActive(arrFirst);
+keyboardButtonActive(arrSecond);
+keyboardButtonActive(arrThird);
+keyboardButtonActive(arrFourth);
+keyboardButtonActive(arrFifth);
+
+const keyboard = document.querySelector(".keyboard");
+const textarea = document.querySelector(".textarea");
+
+function outputSymbol(index) {
+  let result = "";
+  keyboard.addEventListener("click", (e) => {
+    const button = e.target.closest(".button-basic");
+    result = `${result}${button.childNodes[index].innerText}`;
+    textarea.innerText = `${textarea.innerText}${result}`;
+  });
+}
+// outputSymbol(2);
+
+const english = document.querySelectorAll(".english");
+const russian = document.querySelectorAll(".russian");
 
 function switchLanguage() {
-  const shiftLeft = document.querySelector(".shift-left");
-  const altLeft = document.querySelector(".alt-left");
-  const english = document.querySelectorAll(".english");
-  const russian = document.querySelectorAll(".russian");
-  shiftLeft.classList.add("pressed");
-  altLeft.classList.add("pressed");
-
   english.forEach((el) => el.classList.toggle("english-inactive"));
   russian.forEach((el) => el.classList.toggle("russian-active"));
   const englishInactive = document.querySelector(".english-inactive");
@@ -597,25 +663,3 @@ function runOnKeys(func, ...args) {
 }
 
 runOnKeys(switchLanguage(), "ShiftLeft", "AltLeft");
-
-// function activeButton(arr) {
-//   for (let i; i < arr.length; i++) {
-//     if (event.code === arr[i].keycode) {
-//       const lightButton = document.querySelector(arr[i].class);
-//       return lightButton.classList.add("active");
-//       // (arr[i].class = "active");
-//       // classList.add("active");
-//       // keyQ.classList.add("active");
-//     }
-//   }
-// }
-// // const keyQ = document.querySelector(".key-q");
-// document.addEventListener("keyup", () => {
-//   console.log(111);
-//   activeButton(arrSecond);
-//   let x = "." + arrSecond[1].class;
-//   const lightButton = document.querySelector(x);
-//   console.log(lightButton);
-// });
-// // arrSecond[1].class = arrSecond[1].class + " active";
-// // function activeButton(arr) {}

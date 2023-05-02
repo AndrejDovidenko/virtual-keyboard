@@ -3,6 +3,15 @@
   margin: 0;
 }
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -30,7 +39,6 @@
 }
 
 .button-basic {
-  /* width: 10%; */
   height: 50px;
   background-color: black;
   display: flex;
@@ -52,20 +60,20 @@
   background-color: #007bff;
 } */
 
-@keyframes button-active {
+/* @keyframes button-active {
   from {
     background-color: black;
   }
   to {
     background-color: #007bff;
   }
-}
+} */
 
 .pressed {
-  animation: button-active 0.5s;
-  /* background-color: #007bff;
+  /* animation: button-active 0.5s; */
+  background-color: #007bff;
   border-radius: 20px;
-  transition: 0.5s; */
+  transition: 0.5s;
 }
 
 .english {

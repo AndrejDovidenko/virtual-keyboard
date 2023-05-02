@@ -617,17 +617,41 @@ keyboardButtonActive(arrFourth);
 keyboardButtonActive(arrFifth);
 
 let result = "";
+const buttonCaps = document.querySelector(".CapsLock");
+const capsLockKey = () => {
+  if (event.code === "CapsLock") {
+    buttonCaps.classList.toggle("focus");
+  }
+};
+
+const capsLockClick = () => {
+  buttonCaps.classList.toggle("focus");
+};
 
 const en = (event) => {
-  const button = event.target.closest(".button-basic");
-  result = `${result}${button.childNodes[2].innerText}`;
-  textarea.innerText = `${textarea.innerText}${result}`;
+  const buttonCapsFocus = document.querySelector(".CapsLock.focus");
+  if (buttonCapsFocus) {
+    const button = event.target.closest(".button-basic");
+    result = `${result}${button.childNodes[2].innerText.toUpperCase()}`;
+    textarea.innerText = `${textarea.innerText}${result}`;
+  } else {
+    const button = event.target.closest(".button-basic");
+    result = `${result}${button.childNodes[2].innerText}`;
+    textarea.innerText = `${textarea.innerText}${result}`;
+  }
 };
 
 const ru = (event) => {
-  const button = event.target.closest(".button-basic");
-  result = `${result}${button.childNodes[6].innerText}`;
-  textarea.innerText = `${textarea.innerText}${result}`;
+  const buttonCapsFocus = document.querySelector(".CapsLock.focus");
+  if (buttonCapsFocus) {
+    const button = event.target.closest(".button-basic");
+    result = `${result}${button.childNodes[6].innerText.toUpperCase()}`;
+    textarea.innerText = `${textarea.innerText}${result}`;
+  } else {
+    const button = event.target.closest(".button-basic");
+    result = `${result}${button.childNodes[6].innerText}`;
+    textarea.innerText = `${textarea.innerText}${result}`;
+  }
 };
 
 const enKey = () => {
@@ -638,13 +662,26 @@ const enKey = () => {
     ...arrFourth,
     ...arrFifth,
   ];
-  let classItem = "";
-  for (let i = 0; i < resultArr.length; i++) {
-    if (event.code === resultArr[i].keycode) {
-      classItem = `${classItem}${"."}${resultArr[i].keycode}`;
-      const button = document.querySelector(classItem);
-      result = `${result}${button.childNodes[2].innerText}`;
-      textarea.innerText = `${textarea.innerText}${result}`;
+  const buttonCapsFocus = document.querySelector(".CapsLock.focus");
+  if (buttonCapsFocus) {
+    let classItem = "";
+    for (let i = 0; i < resultArr.length; i++) {
+      if (event.code === resultArr[i].keycode) {
+        classItem = `${classItem}${"."}${resultArr[i].keycode}`;
+        const button = document.querySelector(classItem);
+        result = `${result}${button.childNodes[2].innerText.toUpperCase()}`;
+        textarea.innerText = `${textarea.innerText}${result}`;
+      }
+    }
+  } else {
+    let classItem = "";
+    for (let i = 0; i < resultArr.length; i++) {
+      if (event.code === resultArr[i].keycode) {
+        classItem = `${classItem}${"."}${resultArr[i].keycode}`;
+        const button = document.querySelector(classItem);
+        result = `${result}${button.childNodes[2].innerText}`;
+        textarea.innerText = `${textarea.innerText}${result}`;
+      }
     }
   }
 };
@@ -657,13 +694,26 @@ const ruKey = () => {
     ...arrFourth,
     ...arrFifth,
   ];
-  let classItem = "";
-  for (let i = 0; i < resultArr.length; i++) {
-    if (event.code === resultArr[i].keycode) {
-      classItem = `${classItem}${"."}${resultArr[i].keycode}`;
-      const button = document.querySelector(classItem);
-      result = `${result}${button.childNodes[6].innerText}`;
-      textarea.innerText = `${textarea.innerText}${result}`;
+  const buttonCapsFocus = document.querySelector(".CapsLock.focus");
+  if (buttonCapsFocus) {
+    let classItem = "";
+    for (let i = 0; i < resultArr.length; i++) {
+      if (event.code === resultArr[i].keycode) {
+        classItem = `${classItem}${"."}${resultArr[i].keycode}`;
+        const button = document.querySelector(classItem);
+        result = `${result}${button.childNodes[6].innerText.toUpperCase()}`;
+        textarea.innerText = `${textarea.innerText}${result}`;
+      }
+    }
+  } else {
+    let classItem = "";
+    for (let i = 0; i < resultArr.length; i++) {
+      if (event.code === resultArr[i].keycode) {
+        classItem = `${classItem}${"."}${resultArr[i].keycode}`;
+        const button = document.querySelector(classItem);
+        result = `${result}${button.childNodes[6].innerText}`;
+        textarea.innerText = `${textarea.innerText}${result}`;
+      }
     }
   }
 };
@@ -677,11 +727,15 @@ function switchLanguage() {
   const englishInactive = document.querySelector(".english-inactive");
 
   if (!englishInactive) {
+    document.addEventListener("keyup", capsLockKey);
+    buttonCaps.addEventListener("click", capsLockClick);
     keyboard.removeEventListener("click", ru);
     keyboard.addEventListener("click", en);
     document.removeEventListener("keydown", ruKey);
     document.addEventListener("keydown", enKey);
   } else {
+    document.addEventListener("keyup", capsLockKey);
+    buttonCaps.addEventListener("click", capsLockClick);
     keyboard.removeEventListener("click", en);
     keyboard.addEventListener("click", ru);
     document.removeEventListener("keydown", enKey);
